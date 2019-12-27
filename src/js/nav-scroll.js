@@ -15,4 +15,4 @@ jquery(document).ready(function ($){
 		e.preventDefault();
 		$('html, body'). animate({scrollTop: 0}, 400);
 	});
-});
+});  
