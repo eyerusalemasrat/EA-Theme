@@ -110,6 +110,7 @@ function ea_theme_scripts() {
 	wp_enqueue_style( 'ea-theme_bootstrap_css', get_template_directory_uri() . '/dist/css/bootstrap.min.css' );
 
 	wp_enqueue_style( 'ea-theme_fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css' );
+	
 
 	wp_enqueue_style( 'ea-theme-style', get_stylesheet_uri() );
 
