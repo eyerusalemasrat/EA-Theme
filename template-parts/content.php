@@ -10,9 +10,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<?php if ( has_post_thumbnail() )  the_post_thumbnail(); ?>
+
 	<header class="entry-header">
-		<?php
+	<?php if ( has_post_thumbnail() )  the_post_thumbnail(); ?>
+		<?php 
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
@@ -33,7 +34,9 @@
 	<?php ea_theme_post_thumbnail(); ?>
 
 	<div class="entry-content">
+
 		<?php
+		if( is_single()){
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
@@ -46,6 +49,9 @@
 			),
 			get_the_title()
 		) );
+		} else {
+			the_excerpt();
+		}
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ea-theme' ),
@@ -58,3 +64,4 @@
 		<?php ea_theme_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+<hr>
