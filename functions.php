@@ -170,4 +170,11 @@ require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+add_action( 'init', 'ea_theme_setup' );
+add_theme_support( 'custom-background' );
+add_theme_support( 'custom-header' );
+add_theme_support( 'post-thumbnail' );
+add_theme_support( 'post-formats',array('aside','image','video'));
+
+
 

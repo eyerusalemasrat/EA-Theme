@@ -9,6 +9,12 @@
 
 get_header();
 ?>
+	<section class="page-wrap">
+    <div class="container">
+         <?php get_template_part('inc/section', 'archive');?>
+	</div>
+	</section>	
+
 
 	<div id="primary" class="content-area col-md-8">
 		<main id="main" class="site-main">

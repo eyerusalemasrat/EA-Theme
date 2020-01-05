@@ -78,6 +78,7 @@ body {
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
+	text-align: center;
 }
 
 /* Grouping content
@@ -404,6 +405,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	text-align: center;
 }
 
 p {
@@ -562,6 +564,7 @@ table {
 }
 h1.entry-title, h2.entry-title {
 	margin-top: 1em;
+	text-align: center;
 }
 footer {
 	margin-top: 20px;

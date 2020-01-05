@@ -26,7 +26,7 @@
 	
 	<header id="masthead" class="site-header row">
 	<nav id="menu" class="navbar navbar-expand-md navbar-light"  role="navigation" >
-		<div class="site-branding col-md-4">
+		<div class="site-branding navbar-brand">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -35,7 +35,8 @@
 				<?php
 			else :
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<!--  Jerry milw ezi gan -->
+				<!--<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>-->
 				<?php
 			endif;
 			$ea_theme_description = get_bloginfo( 'description', 'display' );
@@ -45,7 +46,7 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<button class="navbar-toggle navbar-toggler-right" type="button" data-toggle="collapse"
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
     data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -55,7 +56,7 @@
       'theme_location'   => 'primary',
       'container'        => 'div',
       'container_id'     => 'bs4navbar',
-      'container_class'  => 'collapse navbar-collapse',
+	  'container_class'  => 'collapse navbar-collapse',
       'menu_id'          => 'main-menu',
       'menu_class'       => 'navbar-nav ml-auto',
       'depth'            => 2,
