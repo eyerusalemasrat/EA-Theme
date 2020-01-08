@@ -9,7 +9,8 @@
 
 get_header();
 ?>
-    <div class="container">
+    <section class = "page-wrap">
+	<div class="container">
     	<?php get_template_part('inc/section', 'archive');?>
 		<?php
 		global $wp_query;
@@ -25,6 +26,7 @@ get_header();
 		?>
 		
 	</div>
+	</section>
 		
 
 
