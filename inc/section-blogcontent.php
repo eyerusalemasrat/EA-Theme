@@ -11,10 +11,22 @@
     <p> Posted by <?php echo $fname;?>  <?php echo $lname;?></p>  
     ?>
     <?php
-    $tags = get_the_tages();
+    $tags = get_the_tags();
     foreach($tags as $tag);
     ?>
-    <ahref="<?php echo get_tag_link($tag->term_id);?>">
+    <a href="<?php echo get_tag_link($tag->term_id);?>">
         <?php echo $tag->name;?>
 <?php endforeach;?>
+
+<?php
+$categories = get_the_catagory();
+foreach($categories as $cat):
+
+?>
+<a href="<?php echo get_category_link($cat->term_id);?>">
+<?php echo $cat->name;?>
+</a>
+<?php endforeach;?>
+
+
 <?php endwhile: else: endif:?>
