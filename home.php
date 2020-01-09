@@ -6,7 +6,7 @@
         <div class="post-content">
             <?php the_content(); ?>
         </div>
-        <a href="<?php the_permalink(); ?>">Read more</a>
+        <a href="<?php the_permalink(  )?>" class="btn btn-success">Read more</a>
     </article>
 <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>
