@@ -490,6 +490,10 @@ h1.site-title,h2.site-title, p.site-title{
 	line-height: 10em;
 	font-size: 30px;
 	letter-spacing: 1px;
+	width: 250px;
+	height: 70px;
+	background-color: #666 top left no-repeat;
+	text-indent: -9999px;
 
 }
 .site-title a {
@@ -1018,3 +1022,20 @@ object {
 .entry-header h2.entry-title {
 	text-decoration: none;
 }
+.moretag {
+	background: #3498db;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	
+	}
+	
+	.moretag:hover {
+	background: #3cb0fd;
+	text-decoration: none;
+	}

@@ -94,7 +94,8 @@ add_action('admin_init', 'ea_theme_add_editor_style');
  *
  * @global int $content_width
  */
-function ea_theme_content_width() {
+
+ function ea_theme_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
@@ -103,30 +104,37 @@ function ea_theme_content_width() {
 add_action( 'after_setup_theme', 'ea_theme_content_width', 0 );
 
 
+function new_excerpt_more($more) {
+	global $post;
+   return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Read the full article...</a>';
+  }
+  add_filter('excerpt_more', 'new_excerpt_more');
+
+  
 /**
  * Enqueue scripts and styles.
  */
 function ea_theme_scripts() {
-	wp_enqueue_style( 'ea-theme_bootstrap_css', get_template_directory_uri() . '/dist/css/bootstrap.min.css' );
+	wp_enqueue_style( 'ea-theme_bootstrap_css', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
 
-	wp_enqueue_style( 'ea-theme_fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css' );
+	wp_enqueue_style( 'ea-theme_fontawesome', get_template_directory_uri() . '/assets/font/fonts/css/font-awesome.min.css' );
 	
 
 	wp_enqueue_style( 'ea-theme-style', get_stylesheet_uri() );
 
-	wp_register_script('popper', get_template_directory_uri() . '/src/js/popper.min.js', array(), '20170710', true );
+	wp_register_script('popper', get_template_directory_uri() . '/assets/js/popper.min.js', array(), '20170710', true );
 
-	wp_enqueue_script( 'ea-theme-tether', get_template_directory_uri() . '/src/js/tether.min.js', array(), '20170115', true );
+	wp_enqueue_script( 'ea-theme-tether', get_template_directory_uri() . '/assets/js/tether.min.js', array(), '20170115', true );
 	 
-	wp_enqueue_script( 'ea-theme_bootstrap_js', get_template_directory_uri() . '/src/js/bootstrap.min.js', array('jquery'), '20170915', true );
+	wp_enqueue_script( 'ea-theme_bootstrap_js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '20170915', true );
 
 
-	wp_enqueue_script( 'ea-theme-bootstrap-hover', get_template_directory_uri() . '/src/js/bootstrap-hover.js', array('jquery'), '20170115', true ); 
+	wp_enqueue_script( 'ea-theme-bootstrap-hover', get_template_directory_uri() . '/assets/js/bootstrap-hover.js', array('jquery'), '20170115', true ); 
 
-	wp_enqueue_script( 'ea-theme-nav-scroll', get_template_directory_uri() . '/src/js/nav-scroll.js', array('jquery'), '20170115', true );
+	wp_enqueue_script( 'ea-theme-nav-scroll', get_template_directory_uri() . '/assets/js/nav-scroll.js', array('jquery'), '20170115', true );
 
 
-	wp_enqueue_script( 'ea-theme-skip-link-focus-fix', get_template_directory_uri() . '/src/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'ea-theme-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
