@@ -708,6 +708,7 @@ a:hover, a:active {
 .navbar{
 	padding-left: 0 ;
 	padding-right: 0;
+	display: flex;
 }
 
 .comment-navigation .nav-next,
@@ -854,6 +855,7 @@ a:hover, a:active {
 	margin: 0 0 1.5em;
 	/* Make sure select elements fit in widgets. */
 }
+.widget-title #recent-posts h2 {color: red;}
 
 .widget select {
 	max-width: 100%;
