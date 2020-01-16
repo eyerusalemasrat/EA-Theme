@@ -1025,19 +1025,30 @@ object {
 	text-decoration: none;
 }
 .moretag {
-	background: #3498db;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	border-radius: 5px;
-	font-family: Arial;
 	color: #ffffff;
-	font-size: 20px;
-	padding: 10px 20px 10px 20px;
+	padding: 10px;
 	text-decoration: none;
 	
 	}
 	
 	.moretag:hover {
-	background: #3cb0fd;
-	text-decoration: none;
+	text-decoration: underline;
+	}
+	.widget-area .widget-title {
+		font-weight: bold;
+		
+	}
+	.content-area .entry-title a{
+		font-weight: bold;
+		color: #111;
+	}
+	.widget-area ul li{
+		list-style: none;
+		align-items: center;
+		text-align: center;
+
+	}
+	.widget-area ul li a {
+		font-size: 500;
 	}
