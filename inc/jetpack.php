@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package EA-Theme
+ * @package EA
  */
 
 /**
@@ -28,7 +28,7 @@ function ea_theme_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details'    => array(
-			'stylesheet' => 'ea-theme-style',
+			'stylesheet' => 'ea-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
