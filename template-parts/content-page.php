@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package EA-Theme
+ * @package EA
  */
 
 ?>
@@ -21,7 +21,7 @@
 		the_content();
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ea-theme' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ea' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -34,7 +34,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'ea-theme' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'ea' ),
 						array(
 							'span' => array(
 								'class' => array(),
