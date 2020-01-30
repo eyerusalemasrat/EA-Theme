@@ -60,7 +60,7 @@ if ( ! function_exists( 'ea_theme_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'ea_theme_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'ea_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -182,7 +182,7 @@ add_action( 'init', 'ea_theme_setup' );
 add_theme_support( 'custom-background' );
 add_theme_support( 'custom-header' );
 add_theme_support( 'post-thumbnail' );
-add_theme_support( 'post-formats',array('aside','image','video'));
+
 
 
 
